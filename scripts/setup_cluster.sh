@@ -4,9 +4,9 @@ HOSTFILE=$1
 
 while read HOST ; do
 	scp $HOSTFILE $HOST:~/machines	
-	cd ~/repos/PowerGraph/release/toolkits
-	~/repos/PowerGraph/scripts/mpirsync
-	cd ~/repos/PowerGraph/deps/local
-	~/repos/PowerGraph/scripts/mpirsync
-	cd ~/repos/PowerGraph/scripts
+	cd ~/PowerGraph/release/toolkits
+	~/PowerGraph/scripts/mpirsync
+	cd ~/PowerGraph/deps/local
+	~/PowerGraph/scripts/mpirsync
+	cd ~/PowerGraph/scripts
 done < $HOSTFILE
